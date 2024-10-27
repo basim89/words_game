@@ -1,0 +1,147 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px #000;
+    animation: slideIn 1s ease-in-out;
+}
+
+.level-container {
+    margin-bottom: 20px;
+}
+
+#word-display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px #000;
+    animation: slideIn 1s ease-in-out;
+}
+
+#image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-item {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.image-item.selected {
+    box-shadow: 0 0 20px #ffd700;
+    transform: scale(1.1);
+}
+
+#pronunciation-button, #check-answer-button {
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+#pronunciation-button:hover, #check-answer-button:hover {
+    background-color: #ffb90f;
+}
+
+.feedback-container {
+    margin-top: 20px;
+}
+
+#feedback {
+    font-size: 1.2em;
+    color: #ff0000;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#feedback.correct {
+    color: #00ff00;
+}
+
+#next-level-button {
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+#next-level-button:hover {
+    background-color: #ffb90f;
+}
+
+#next-level-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

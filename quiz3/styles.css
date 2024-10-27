@@ -1,0 +1,102 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffd700;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #007BFF;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.card.flipped {
+    background-color: #333;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-content {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    background-size: contain; /* Ensure the image fits within the card */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+.card-content.mirrored {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.feedback-container {
+    margin-top: 10px;
+}
+
+#feedback {
+    font-size: 1.2em;
+    color: #ff0000;
+}
+
+#reset-button {
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#reset-button:hover {
+    background-color: #ffb90f;
+}
