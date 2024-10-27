@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackElement.textContent = "Game Over! You've completed all levels.";
             nextLevelButton.disabled = true;
             // Redirect to another webpage using a relative path
-            window.location.href = '../hostpage.html';
+            window.location.href = '../index.html';
         }
     });
 

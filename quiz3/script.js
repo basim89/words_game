@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (matchedPairs === cards.length / 2) {
                 feedbackElement.textContent = 'Congratulations! You matched all pairs!';
                 setTimeout(() => {
-                    window.location.href = '../hostpage.html'; // Redirect to the hostpage.html
+                    window.location.href = '../index.html'; // Redirect to the hostpage.html
                 }, 2000); // Delay the redirect by 2 seconds
             }
         } else {
